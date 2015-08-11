@@ -610,6 +610,10 @@ function! <SID>StartExplorer(curBufNum)
     return
   endif
 
+  " Disable mouse selection in MBE window
+  noremap  <window><LeftDrag>  <LeftMouse>
+  noremap! <window><LeftDrag>  <LeftMouse>
+
   " Set filetype for MBE buffer
   set filetype=minibufexpl
 
